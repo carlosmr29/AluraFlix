@@ -1,0 +1,113 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: var(--modal);
+    padding: 0 20px;
+    border-radius: 8px;
+    height: auto;
+    max-height: 100dvh; 
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--frontend);
+    overflow-y: auto; 
+    overflow-x: hidden; 
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-thumb
+{
+
+ background: none;
+
+ border-radius: 2px;
+
+}
+.title {
+    color: var(--font-modal);
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.cerrar {
+    position: absolute;
+    top: 34px;
+    right: 34px;
+    border: 2px solid var(--blanco);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.cerrar:hover {
+    cursor: pointer;
+    border: 3px solid red;
+    transition: var(--transition);
+    border-radius: 25%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContainer {
+    width: calc(70%);
+}
+
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.botonHome {
+    background-color: var(--negro);
+    box-shadow: inset 0 0 10px var(--azul);
+    border: 2px solid var(--azul);
+    color: var(--azul);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.botonNuevoVideo {
+    background-color: var(--negro);
+    border: 2px solid var(--blanco);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 450px) {
+    .title{
+        font-size: 32px;
+        text-align: center;
+
+    }
+    .formContainer{
+        width: 90%;
+    }
+    .btnGroup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

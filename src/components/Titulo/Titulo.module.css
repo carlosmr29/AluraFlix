@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 296px;
+    height: 70px;
+    background-color: var(--back-color);
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--blanco);
+    
+}
+
+@media screen and (max-width: 820px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        width: 346px;
+        font-size: 30px;
+        margin: 0 auto;
+    }
+    
+}
